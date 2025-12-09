@@ -12,7 +12,3 @@ resource "aws_sns_topic_subscription" "email" {
   protocol  = "email"
   endpoint  = each.value
 }
-
-output "sns_topic_arn" {
-  value = aws_sns_topic.alerts.arn
-}
